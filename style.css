@@ -1,0 +1,108 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  user-select: none;
+}
+
+/* PAGE CENTER */
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Press Start 2P', cursive;
+  background-color: #f7f7f7;
+}
+
+/* GAME WORLD */
+.world {
+  position: relative;
+  overflow: hidden;
+  max-width: 800px;
+  max-height: 240px;
+  background-color: transparent;
+  border: none;
+  aspect-ratio: 100 / 30;
+}
+
+/* SCORE */
+.score,
+.highscore,
+.separator {
+  position: absolute;
+  font-size: 2vmin;
+  color: #535353;
+  top: 1vmin;
+}
+
+.score { right: 1vmin; }
+.separator { right: 7vmin; }
+.highscore { right: 10vmin; }
+
+/* START SCREEN */
+.start-screen {
+  position: absolute;
+  font-size: 2vmin;
+  color: #535353;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hide {
+  display: none;
+}
+
+/* GROUND */
+.ground {
+  --left: 0;
+  position: absolute;
+  width: 300%;
+  bottom: 0;
+  left: calc(var(--left) * 1%);
+}
+
+/* CLOUDS */
+.clouds {
+  --left: 0;
+  position: absolute;
+  width: 100%;
+  top: 15%;
+  left: calc(var(--left) * 1%);
+  opacity: 0.5;
+}
+
+/* 🦖 DINO */
+.dino {
+  --bottom: 0;
+  --dino-size: 36%;
+  position: absolute;
+  left: 1%;
+  height: var(--dino-size);
+  bottom: calc(var(--bottom) * 1%);
+}
+
+/* 🌵 MOM OBSTACLE — FINAL PERFECT FIX */
+.cactus {
+  position: absolute;
+  left: calc(var(--left) * 1%);
+  bottom: 0;
+
+  height: 75px;              /* 🔥 IMAGE-CORRECT SIZE */
+  width: auto;
+
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+/* LOGO */
+.logo {
+  position: absolute;
+  top: 1%;
+  left: 50%;
+  transform: translateX(-50%);
+}
