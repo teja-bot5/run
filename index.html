@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- 📱 Mobile friendly -->
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, user-scalable=no"
+  >
+
+  <title>Run</title>
+
+  <!-- ✅ FAVICON -->
+  <link rel="icon" type="image/png" href="./images/favicon.png?v=2">
+
+  <!-- GOOGLE FONT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./style.css">
+
+  <!-- JS -->
+  <script src="./script.js" type="module" defer></script>
+</head>
+
+<body>
+
+  <!-- GAME WORLD -->
+  <div class="world" data-world>
+
+    <!-- HIGH SCORE -->
+    <div class="highscore hide" data-highscore>
+      <span class="high">HI</span> 0
+    </div>
+
+    <div class="separator">|</div>
+
+    <!-- CURRENT SCORE -->
+    <div class="score" data-score>0</div>
+
+    <!-- START SCREEN -->
+    <div class="start-screen" data-start-screen>
+      Press or Tap to Start
+    </div>
+
+    <!-- GROUND -->
+    <img src="./images/ground.png" class="ground" data-ground>
+    <img src="./images/ground.png" class="ground" data-ground>
+
+    <!-- CLOUDS -->
+    <img src="./images/clouds.png" class="clouds" data-clouds>
+    <img src="./images/clouds.png" class="clouds" data-clouds>
+
+    <!-- 🦖 DINO (IMPORTANT: run frame as default) -->
+    <img
+      src="./images/dino-run-0.png"
+      class="dino"
+      data-dino
+      alt="dino"
+    >
+
+    <!-- 🔊 SOUND EFFECTS -->
+    <audio data-jump-sound src="./audio/hit_sound.mp3" preload="auto"></audio>
+<audio data-hit-sound src="./audio/press_sound.mp3" preload="auto"></audio>
+  </div>
+
+</body>
+</html>
