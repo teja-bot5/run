@@ -29,7 +29,7 @@ Open `index.html` in your browser.
 
 ## Live Demo
 
-Coming Soon
+https://teja-bot5.github.io/run/
 
 ## License
 
